@@ -1,3 +1,32 @@
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" Plugins will be downloaded under the specified directory.
+call plug#begin('~/.vim/plugged')
+
+" Declare the list of plugins.
+Plug 'w0rp/ale'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Raimondi/delimitMate'
+Plug 'roman/golden-ratio'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'tpope/vim-commentary'
+Plug 'airblade/vim-gitgutter'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'ErichDonGubler/vim-sublime-monokai'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'Valloric/YouCompleteMe'
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+
 " basic
 :syntax on
 syntax on
@@ -5,8 +34,8 @@ syntax on
 :set number relativenumber
 
 " pathogen
-execute pathogen#infect()
-call pathogen#helptags()
+"execute pathogen#infect()
+"call pathogen#helptags()
 
 "colors
 colorscheme sublimemonokai

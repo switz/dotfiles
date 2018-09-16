@@ -23,7 +23,10 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'ErichDonGubler/vim-sublime-monokai'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'Valloric/YouCompleteMe'
-
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'alvan/vim-closetag'
+Plug 'tpope/vim-surround'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -32,10 +35,6 @@ call plug#end()
 syntax on
 :set guifont=Menlo-Regular:h14
 :set number relativenumber
-
-" pathogen
-"execute pathogen#infect()
-"call pathogen#helptags()
 
 "colors
 colorscheme sublimemonokai
@@ -82,3 +81,7 @@ let g:strip_whitespace_on_save=1
 let g:ale_linters = {
 \   'javascript': ['eslint', 'flow'],
 \}
+
+" close tags
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.js"
+

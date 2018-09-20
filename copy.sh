@@ -7,3 +7,4 @@ if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
 fi
 git add .
 git commit -m "Updated dotfiles"
+git push origin HEAD

@@ -87,6 +87,8 @@ let g:strip_whitespace_on_save=1
 let g:ale_linters = {
 \   'javascript': ['eslint', 'flow'],
 \}
+let g:ale_fixers = {}
+let g:ale_fixers.javascript = ['eslint']
 
 " close tags
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.js"

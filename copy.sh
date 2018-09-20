@@ -1,4 +1,5 @@
 cp ~/.vimrc .
+cp ~/.config/nvim/init.vim
 git diff
 read -r -p "Are you sure? [Y/n]" response
 response=${response,,} # tolower

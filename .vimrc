@@ -22,11 +22,17 @@ Plug 'mxw/vim-jsx'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'ErichDonGubler/vim-sublime-monokai'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'Valloric/YouCompleteMe'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
+Plug 'Yggdroot/indentLine'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Valloric/YouCompleteMe'
+endif
+
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -84,4 +90,7 @@ let g:ale_linters = {
 
 " close tags
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.js"
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
 

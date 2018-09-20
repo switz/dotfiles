@@ -93,4 +93,7 @@ let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.js"
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+" use <tab> to go through deoplete https://github.com/Shougo/deoplete.nvim/issues/432<Paste>
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 

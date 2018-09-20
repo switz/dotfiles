@@ -44,6 +44,7 @@ syntax on
 
 "colors
 colorscheme sublimemonokai
+hi MatchParen cterm=underline ctermbg=darkgrey ctermfg=none
 
 " nerdtree
 autocmd StdinReadPre * let s:std_in=1

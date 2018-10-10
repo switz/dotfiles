@@ -61,7 +61,7 @@ let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeShowHidden = 1
-let NERDTreeIgnore=['.git$[[dir]]', '.swp', 'node_modules$[[dir]]']
+let NERDTreeIgnore=['.git$[[dir]]', '.swp', 'node_modules$[[dir]]', '.DS_Store']
 
 let g:ctrlp_dont_split = 'NERD'
 let g:ctrlp_map = '<c-p>'
@@ -79,7 +79,7 @@ filetype plugin indent on
 " js
 let g:jsx_ext_required = 0
 let g:javascript_plugin_flow = 1
-let g:javascript_conceal_this = "@"
+" let g:javascript_conceal_this = "@"
 
 " vim conceal
 set conceallevel=1

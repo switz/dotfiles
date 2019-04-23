@@ -28,6 +28,8 @@ Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
 if has('nvim')
+  Plug 'HerringtonDarkholme/yats.vim'
+  Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
   Plug 'Valloric/YouCompleteMe'
@@ -55,6 +57,9 @@ nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 map <leader>nn :NERDTreeToggle<CR>
 map <leader>mm :NERDTreeFind<cr>
 map <leader>r :NERDTreeFind<cr>
+" override for tmux navigator
+let g:NERDTreeMapJumpPrevSibling=""
+let g:NERDTreeMapJumpNextSibling=""
 
 let NERDTreeQuitOnOpen = 1
 let NERDTreeAutoDeleteBuffer = 1

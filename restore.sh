@@ -7,4 +7,6 @@ if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
   mkdir -p ~/.config/fish/functions
   cp .config/nvim/init.vim ~/.config/nvim
   cp .config/fish/functions/fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
+  mkdir -p ~/.hammerspoon
+  cp .hammerspoon.lua ~/.hammerspoon/init.lua
 fi

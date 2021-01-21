@@ -92,3 +92,18 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "g", function()
   f.h = max.h * 0.8
   win:setFrame(f)
 end)
+
+-- bind hotkey
+hs.hotkey.bind({'alt', 'ctrl', 'cmd'}, 'n', function()
+  -- get the focused window
+  local win = hs.window.focusedWindow()
+  -- get the screen where the focused window is displayed, a.k.a. current screen
+  local screen = win:screen()
+  -- compute the unitRect of the focused window relative to the current screen
+  -- and move the window to the next screen setting the same unitRect
+  win:move(win:frame():toUnitRect(screen:frame()), screen:previous(), true, 0)
+end)
+
+
+require('keyboard') -- Load Hammerspoon bits from https://github.com/jasonrudolph/keyboard
+require('Spoons/ip')
